@@ -14,7 +14,9 @@
   .header-links {
     display: inline-block;
 
-    a {
+    a,
+    span {
+      cursor: pointer;
       margin-left: 40px;
     }
   }
@@ -23,12 +25,15 @@
     display: inline-block;
     float: right;
 
-    a {
+    a,
+    span {
+      cursor: pointer;
       margin-left: 40px;
     }
   }
 
-  a:hover {
+  a:hover,
+  span:hover {
     color: $blue;
   }
 }
