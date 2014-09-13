@@ -1,0 +1,68 @@
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,700,500italic,700italic,900,900italic);
+.hidden {
+  display: none; }
+
+.fa-right {
+  margin-right: 8px; }
+
+.fa-left {
+  margin-left: 8px; }
+
+.fa-red {
+  color: #e06663 !important; }
+
+body,
+input,
+textarea,
+button {
+  font-family: 'Roboto', Helvetica Neue, Helvetica, Arial, sans-serif; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+/* NOTE: _modals.scss also contains some of the inputs styling. */
+input[type=email],
+input[type=text],
+input[type=password],
+input {
+  border: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 0 0 0;
+  -moz-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0; }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #ffe6ff inset; }
+
+[type=checkbox] {
+  display: none; }
+
+[type=checkbox] + label:before {
+  content: "\f096";
+  font-family: FontAwesome;
+  vertical-align: middle; }
+
+[type=checkbox]:checked + label:before {
+  content: "\f046";
+  font-family: FontAwesome;
+  vertical-align: middle; }
+
+[type=radio] {
+  display: none; }
+
+[type=radio] + label:before {
+  content: "\f10c";
+  font-family: FontAwesome;
+  margin-right: 6px; }
+
+[type=radio]:checked + label:before {
+  content: "\f192";
+  font-family: FontAwesome; }
+
+[type="radio"]:checked + label {
+  color: #333 !important; }
