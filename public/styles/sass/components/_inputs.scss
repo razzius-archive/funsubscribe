@@ -7,6 +7,10 @@ input {
   border: none;
   @include border-radius(0);
   @include box-shadow(0, 0, 0, 0);
+
+  &:focus {
+    outline: none;
+  }
 }
 
 input[type=button],
