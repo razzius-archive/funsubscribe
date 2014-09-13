@@ -22,7 +22,8 @@ app.get('/api/service/', function(request, response) {
 app.post('/api/service/', function(request, response) {
   var service = new Service({
     'name': 'Pandora',
-    'url': 'http://www.pandora.com'
+    'url': 'http://www.pandora.com',
+    'img': 'http://www.sec.gov/Archives/edgar/data/1230276/000119312511032963/g119636g94a15.jpg'
   });
   service.save(function (err, object) {
     console.log('err is ' + err);
