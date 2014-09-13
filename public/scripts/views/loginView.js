@@ -3,7 +3,7 @@ define([
 	"underscore",
 	"backbone",
 	"events",
-	"text!../../templates/login-template.html",
+	"text!../../templates/login-dialog-template.html",
 
 	], function (	$, _, Backbone, vent,
 					loginTemplate
