@@ -1,7 +1,7 @@
 @import url(http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css);
 @import url(../../bower_components/sass-bootstrap/dist/css/bootstrap.css);
 @import url(../../bower_components/normalize-css/normalize.css);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300);
+@import url(http://fonts.googleapis.com/css?family=Muli:300,400,300italic,400italic);
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 .hidden {
   display: none; }
@@ -19,7 +19,7 @@ body,
 input,
 textarea,
 button {
-  font-family: 'Montserrat', 'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif; }
+  font-family: 'Montserrat', Helvetica Neue, Helvetica, Arial, sans-serif; }
 
 a {
   color: inherit;
@@ -85,7 +85,9 @@ input:-webkit-autofill {
   font-weight: 500;
   line-height: 64px; }
   .header .header-logo {
-    display: inline-block; }
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase; }
   .header .header-auth {
     display: inline-block;
     float: right; }
@@ -94,7 +96,12 @@ input:-webkit-autofill {
 
 .footer {
   background: white;
-  height: 64px; }
+  color: #ccc;
+  font-size: 13px;
+  font-weight: 500;
+  height: 64px;
+  line-height: 64px;
+  text-align: center; }
 
 .splash-body {
   background: #eeeeee; }
