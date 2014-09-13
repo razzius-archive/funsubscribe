@@ -93,12 +93,14 @@ input:-webkit-autofill {
     display: inline-block; }
     .header .header-links a,
     .header .header-links span {
+      cursor: pointer;
       margin-left: 40px; }
   .header .header-auth {
     display: inline-block;
     float: right; }
     .header .header-auth a,
     .header .header-auth span {
+      cursor: pointer;
       margin-left: 40px; }
   .header a:hover,
   .header span:hover {
@@ -116,7 +118,38 @@ input:-webkit-autofill {
 .list-body {
   background: #eeeeee; }
   .list-body .list-content {
-    height: 400px; }
+    height: 100vh; }
+    .list-body .list-content .subscription-block {
+      background: #fff;
+      display: inline-block;
+      height: 150px;
+      margin: 20px 20px 0 0;
+      position: relative;
+      width: 150px; }
+      .list-body .list-content .subscription-block img {
+        height: 60px;
+        width: 150px; }
+      .list-body .list-content .subscription-block span {
+        color: #bbb;
+        font-size: 11px;
+        font-weight: 500;
+        display: block;
+        margin-top: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%; }
+      .list-body .list-content .subscription-block button {
+        background: #eee;
+        border: 10px solid #fff;
+        bottom: 0;
+        color: #e06663;
+        font-size: 11px;
+        font-weight: 500;
+        left: 0;
+        padding: 10px 0;
+        position: absolute;
+        text-transform: uppercase;
+        width: 150px; }
 
 .splash-body {
   background: #eeeeee; }
