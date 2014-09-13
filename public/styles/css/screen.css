@@ -150,6 +150,9 @@ input:-webkit-autofill {
         position: absolute;
         text-transform: uppercase;
         width: 150px; }
+        .list-body .list-content .subscription-block button:hover {
+          background: #e06663;
+          color: #fff; }
 
 .splash-body {
   background: #eeeeee; }
