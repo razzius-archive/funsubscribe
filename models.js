@@ -3,16 +3,16 @@ var mongoose = require('mongoose'),
 
 
 var UserSchema = new Schema({
-	firstName: { 
+	name: { 
 		"type": String,
 		"trim": true,
-		"required": "First name cannot be blank",
+		"required": "Name cannot be blank",
 	},
-	lastName: { 
-		"type": String,
-		"trim": true,
-		"required": "Last name cannot be blank",
-	},
+	email: {
+		'email': String,
+		"time": true,
+		"required": "Must provide email"
+	}
 });
 
 /**
