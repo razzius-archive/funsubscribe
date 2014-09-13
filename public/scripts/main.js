@@ -14,6 +14,7 @@ require.config({
         underscore: '../bower_components/underscore/underscore',
         bootstrap: '../bower_components/sass-bootstrap/dist/js/bootstrap',
 		text: '../bower_components/requirejs-text/text',
+		jqueryui: '../bower_components/jquery-ui/jquery-ui.js',
     }
 });
 
