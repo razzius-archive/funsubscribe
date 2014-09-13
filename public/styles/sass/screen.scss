@@ -8,6 +8,7 @@
 @import "modules/functions";
 
 // Vendors
+@import "../../../sass-bootstrap/dist/css/bootstrap.custom.css";
 
 // Base
 @import "base/typography";
@@ -23,3 +24,8 @@
 @import "components/scrollbars";
 
 // Sections
+@import "sections/header";
+@import "sections/list";
+@import "sections/splash";
+@import "sections/store";
+@import "sections/subscription";
