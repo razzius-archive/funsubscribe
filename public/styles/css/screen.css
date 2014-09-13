@@ -91,14 +91,17 @@ input:-webkit-autofill {
     text-transform: uppercase; }
   .header .header-links {
     display: inline-block; }
-    .header .header-links a {
+    .header .header-links a,
+    .header .header-links span {
       margin-left: 40px; }
   .header .header-auth {
     display: inline-block;
     float: right; }
-    .header .header-auth a {
+    .header .header-auth a,
+    .header .header-auth span {
       margin-left: 40px; }
-  .header a:hover {
+  .header a:hover,
+  .header span:hover {
     color: #528dcc; }
 
 .footer {
