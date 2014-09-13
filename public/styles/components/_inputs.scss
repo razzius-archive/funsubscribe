@@ -1,0 +1,22 @@
+/* NOTE: _modals.scss also contains some of the inputs styling. */
+
+input[type=email],
+input[type=text],
+input[type=password],
+input {
+  border: none;
+  @include border-radius(0);
+  @include box-shadow(0, 0, 0, 0);
+}
+
+input[type=button],
+input[type=submit],
+button {
+  // Currently unimplemented
+}
+
+
+// Change Chrome autocomplete color
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $very-light-purple inset;
+}
