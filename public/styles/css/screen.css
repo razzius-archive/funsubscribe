@@ -1,6 +1,6 @@
 @import url(http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css);
 @import url(../../../sass-bootstrap/dist/css/bootstrap.custom.css);
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,700,500italic,700italic,900,900italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300);
 .hidden {
   display: none; }
 
@@ -17,7 +17,7 @@ body,
 input,
 textarea,
 button {
-  font-family: 'Roboto', Helvetica Neue, Helvetica, Arial, sans-serif; }
+  font-family: 'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif; }
 
 a {
   color: inherit;
@@ -67,3 +67,6 @@ input:-webkit-autofill {
 
 [type="radio"]:checked + label {
   color: #333 !important; }
+
+.splash-body {
+  background: #eeeeee; }
