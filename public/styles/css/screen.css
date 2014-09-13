@@ -49,7 +49,7 @@ input {
   box-shadow: 0 0 0 0; }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #ffe6ff inset; }
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset; }
 
 [type=checkbox] {
   display: none; }
@@ -89,11 +89,17 @@ input:-webkit-autofill {
     display: inline-block;
     font-weight: 700;
     text-transform: uppercase; }
+  .header .header-links {
+    display: inline-block; }
+    .header .header-links a {
+      margin-left: 40px; }
   .header .header-auth {
     display: inline-block;
     float: right; }
     .header .header-auth a {
       margin-left: 40px; }
+  .header a:hover {
+    color: #528dcc; }
 
 .footer {
   background: white;
@@ -103,6 +109,11 @@ input:-webkit-autofill {
   height: 64px;
   line-height: 64px;
   text-align: center; }
+
+.list-body {
+  background: #eeeeee; }
+  .list-body .list-content {
+    height: 400px; }
 
 .splash-body {
   background: #eeeeee; }

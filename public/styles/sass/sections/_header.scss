@@ -11,16 +11,24 @@
     text-transform: uppercase;
   }
 
+  .header-links {
+    display: inline-block;
+
+    a {
+      margin-left: 40px;
+    }
+  }
+
   .header-auth {
     display: inline-block;
     float: right;
 
     a {
       margin-left: 40px;
-
-      &:hover {
-
-      }
     }
+  }
+
+  a:hover {
+    color: $blue;
   }
 }
