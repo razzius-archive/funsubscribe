@@ -1,0 +1,59 @@
+.modal {
+  .modal-dialog {
+    width: 400px;
+
+    .modal-content {
+      border-color: transparent;
+      @include border-radius(0);
+      @include box-shadow(0, 0, 0, 0);
+
+      .modal-header {
+        border: none;
+
+        .modal-title {
+          color: #555;
+          font-size: 16px;
+        }
+      }
+
+      .modal-body {
+
+        input {
+          border-bottom: 1px solid #ddd;
+          font-family: 'Muli';
+          font-size: 16px;
+          display: block;
+          margin-bottom: 20px;
+          padding: 10px 0;
+          width: 100%;
+        }
+      }
+
+      .modal-footer {
+        border: none;
+
+        .modal-cancel {
+          background: #ddd;
+          border: none;
+          @include border-radius(0);
+          color: #555;
+          font-size: 11px;
+          padding: 10px;
+          text-transform: uppercase;
+          width: 100px;
+        }
+
+        .modal-submit {
+          background: $green;
+          border: none;
+          @include border-radius(0);
+          color: #fff;
+          font-size: 11px;
+          padding: 10px;
+          text-transform: uppercase;
+          width: 100px;
+        }
+      }
+    }
+  }
+}
