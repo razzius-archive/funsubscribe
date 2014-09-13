@@ -7,7 +7,7 @@ define([
 	"views/loginView",
 
 	], function (	$, _, Backbone, vent,
-					SplashView, LoginView,
+					SplashView, LoginView
 				) { 
 		var Router = Backbone.Router.extend({
 			routes: { 
@@ -38,6 +38,13 @@ define([
 			renderBigView: function () { 
 				$("#view-holder").html( this.bigView.render().el );
 			},
+
+			renderDialogView: function () { 
+			},
+
+			renderDialogView: function () { 
+
+			}
 
 		});
 
