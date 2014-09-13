@@ -3,7 +3,6 @@ define([
 	"underscore",
 	"backbone",
 	"events",
-	"../views/headerView",
 
 	], function (	$, _, Backbone, vent,
 					HeaderView
@@ -13,9 +12,7 @@ define([
 			},
 
 			initialize: function () { 
-				this.HeaderView = new HeaderView();
-				$("#header-holder").html( this.HeaderView.render.el );
-				console.log($("#header-holder"));
+				$("body").append("<strong>Hi</strong>");
 			},
 			
 		});
