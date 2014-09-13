@@ -1,0 +1,34 @@
+.header {
+  color: #555;
+  height: 64px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 64px;
+
+  .header-logo {
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .header-links {
+    display: inline-block;
+
+    a {
+      margin-left: 40px;
+    }
+  }
+
+  .header-auth {
+    display: inline-block;
+    float: right;
+
+    a {
+      margin-left: 40px;
+    }
+  }
+
+  a:hover {
+    color: $blue;
+  }
+}

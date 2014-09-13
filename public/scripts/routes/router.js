@@ -3,21 +3,34 @@ define([
 	"underscore",
 	"backbone",
 	"events",
-	"../views/headerView",
+	"views/splashView",
 
 	], function (	$, _, Backbone, vent,
-					HeaderView
+					SplashView
 				) { 
 		var Router = Backbone.Router.extend({
 			routes: { 
+				"": "loadIndex",
 			},
 
 			initialize: function () { 
-				this.HeaderView = new HeaderView();
-				$("#header-holder").html( this.HeaderView.render.el );
-				console.log($("#header-holder"));
+				// get cookie to check if user session is set
+			},
+
+			loadIndex: function () { 
+				this.clearBigView();
+				this.bigView = new SplashView();
+
+				this.renderBigView();
+			},
+
+			clearBigView: function () { 
+				this.bigView ? this.bigView.remove() : null;
 			},
 			
+			renderBigView: function () { 
+				$("#view-holder").html( this.bigView.render().el );
+			}
 		});
 
 		return Router;

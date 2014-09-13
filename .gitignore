@@ -3,3 +3,4 @@ node_modules
 .git-attributes
 .sass-cache
 env.sh
+*.swp
