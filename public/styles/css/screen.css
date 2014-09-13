@@ -80,6 +80,7 @@ input:-webkit-autofill {
   color: #333 !important; }
 
 .header {
+  color: #555;
   height: 64px;
   font-size: 13px;
   font-weight: 500;
@@ -109,6 +110,17 @@ input:-webkit-autofill {
     background: transparent; }
   .splash-body .splash-image {
     height: 400px; }
+    .splash-body .splash-image img {
+      display: block;
+      margin: 0 auto 0 auto;
+      padding: 80px 0 20px 0;
+      width: 400px; }
+    .splash-body .splash-image span {
+      color: #555;
+      display: block;
+      font-size: 30px;
+      text-align: center;
+      width: 100%; }
   .splash-body .splash-content {
     background: white;
     height: 400px; }
