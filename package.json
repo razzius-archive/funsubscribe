@@ -25,5 +25,9 @@
   "contributors": [
     "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "passport": "^0.2.1",
+    "stormpath": "^0.5.2"
+  }
 }
