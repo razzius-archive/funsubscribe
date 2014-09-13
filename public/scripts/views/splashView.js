@@ -12,6 +12,8 @@ define([
 		var SplashView = Backbone.View.extend({ 
 			template: _.template( splashTemplate ),
 
+			className: "splash-body",
+
 			events: { 
 			},
 
