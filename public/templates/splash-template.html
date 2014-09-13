@@ -8,12 +8,12 @@
         <h4 class="modal-title" id="myModalLabel">Login</h4>
       </div>
       <div class="modal-body">
-        <input type="text" placeholder="Email"/>
-        <input type="password" placeholder="Password"/>
+        <input type="text" class="login-email" placeholder="Email"/>
+        <input type="password" class="login-password" placeholder="Password"/>
       </div>
       <div class="modal-footer">
         <button class="modal-cancel" data-dismiss="modal">Close</button>
-        <button class="modal-submit">Login</button>
+        <button class="modal-submit login">Login</button>
       </div>
     </div>
   </div>
@@ -41,18 +41,19 @@
   </div>
 </div>
 
-
-<div class="header splash-header website-max-width">
-  <div class="header-logo">
-    <i class="fa fa-paper-plane fa-right"></i>
-    Funsubscribe
-  </div>
-  <div class="header-auth">
-    <span data-toggle="modal" data-target="#register">Register</span>
-    <span data-toggle="modal" data-target="#login">Login</span>
-  </div>
-</div>
-
+    <!-- Header --> 
+    <div class="header splash-header website-max-width">
+      <div class="header-logo">
+        <i class="fa fa-paper-plane fa-right"></i>
+        Funsubscribe
+      </div>
+      <div class="header-auth">
+        <span data-toggle="modal" id="register-modal" data-target="#register">Register</span>
+        <span data-toggle="modal" id="login-modal" data-target="#login">Login</span>
+      </div>
+    </div>
+    <!-- end Header --> 
+    
 <div class="splash-image website-max-width">
   <img src="assets/images/splash_2.png"/>
   <span>Tackle your subscriptions</span>

@@ -15,6 +15,7 @@ define([
 			className: "splash-body",
 
 			events: { 
+				"click .login": "submitLogin",
 			},
 
 			initialize: function () {
@@ -25,6 +26,11 @@ define([
 
 				return this;
 			},
+
+			submitLogin: function () { 
+				$(".login-email").val() || $(".login-password").val() ? vent.trigger( "loginSubmit" ) : alert("Please enter your email and password") ;		// Make this alert sexier
+			}
+
 		});
 
 		return SplashView;

@@ -14,6 +14,7 @@ define([
 			className: "dialog",
 
 			events: { 
+				"click .login": "loadSubscriptions",
 			},
 
 			initialize: function () {
@@ -24,6 +25,12 @@ define([
 
 				return this;
 			},
+
+			loadSubscriptions: function () { 
+				console.log("clicked");
+				$(".login-email").length() == 0 || $(".login-email").length() == 0 ? vent.trigger( "loginSubmit" ) : alert("Please enter your email and password") ;
+				console.log($(".login-email").length());
+			}
 		});
 
 		return LoginDialogView;
