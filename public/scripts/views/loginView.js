@@ -3,14 +3,13 @@ define([
 	"underscore",
 	"backbone",
 	"events",
-	"text!../../templates/login-dialog-template.html",
+	//"text!../../templates/login-dialog-template.html",
 
-	], function (	$, _, Backbone, vent,
-					loginTemplate
+	], function (	$, _, Backbone, vent
 				) { 
 
 		var LoginDialogView = Backbone.View.extend({ 
-			template: _.template( loginTemplate ),
+			//template: _.template( loginTemplate ),
 
 			className: "dialog",
 
