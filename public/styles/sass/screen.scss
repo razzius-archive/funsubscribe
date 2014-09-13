@@ -8,7 +8,8 @@
 @import "modules/functions";
 
 // Vendors
-@import "../../../sass-bootstrap/dist/css/bootstrap.custom.css";
+@import "../../bower_components/sass-bootstrap/dist/css/bootstrap.css";
+@import "../../bower_components/normalize-css/normalize.css";
 
 // Base
 @import "base/typography";
