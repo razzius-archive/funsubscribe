@@ -2,15 +2,16 @@
   background: $splash-bkg;
 
   .splash-header {
-
+    background: $splash-header-bkg;
   }
 
   .splash-image {
-
+    height: 400px;
   }
 
   .splash-content {
     background: $splash-content-bkg;
+    height: 400px;
   }
 
   .splash-footer {
