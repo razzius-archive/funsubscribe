@@ -2,5 +2,6 @@ node_modules
 .DS_Store
 .git-attributes
 .sass-cache
+env.sh
 *.swp
 *.swo
