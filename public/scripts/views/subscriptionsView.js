@@ -32,7 +32,11 @@ define([
 					imageUrl: '/assets/images/pandora_logo.png',
 					cost: "$3.99",
 					lastUsed: "6 days ago",
-					startDate: "May 11, 2013"
+					startDate: "May 11, 2013",
+					daysLeft: "23",
+					type: "music",
+					active: true,
+
 				});
 
 				for (var i = 0; i < 4; i++) { 
