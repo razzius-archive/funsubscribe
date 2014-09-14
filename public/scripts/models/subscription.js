@@ -12,7 +12,7 @@ define([
 			initialize: function () { 
 			},
 
-			idAttribute: ,
+			// idAttribute: 
 
 			validate: function () { 
 			}
