@@ -4,11 +4,14 @@ define([
 	"backbone",
 	"events",
 	"views/subscriptionBlockView",
+	"views/singleSuggestionView",
 	"models/subscription",
+	"models/service",
 	"text!../../templates/subscription-list-template.html",
+    "bootstrap"
 
 	], function (	$, _, Backbone, vent,
-					SubscriptionBlockView, Subscription,
+					SubscriptionBlockView, SingleSuggestionView, Subscription, Service,
 					subscriptionListTemplate
 				) {
 
@@ -29,7 +32,7 @@ define([
                 var subList = [];
 
                 subList.push( new Subscription({
-					name: "Pandora",
+					name: "Pandora One",
                     description: "A kind of radio – stations that play only music you like.",
 					url: "http://www.pandora.com",
 					imageUrl: '/assets/images/pandora_logo.png',
@@ -43,10 +46,10 @@ define([
 				}));
 
                 subList.push( new Subscription({
-					name: "PennCycle",
+					name: "PennCycle Basic",
                     description: "The University of Pennsylvania's one and only bike share.",
 					url: "http://www.penncycle.org",
-					imageUrl: '/assets/images/pandora_logo.png',     // TODO 
+					imageUrl: '/assets/images/penncycle_logo.png',     // TODO 
 					cost: 20.00,
 					lastUsed: "2 days ago",
 					startDate: "August 29, 2014",
@@ -72,10 +75,10 @@ define([
 				}));
 
                 subList.push( new Subscription({
-					name: "SoundCloud",
-                    description: "Hear the world's sounds.",
+					name: "SoundCloud Pro",
+                    description: "Hear the world's sounds. Count plays, likes, comments, and downloads.",
 					url: "http://www.soundcloud.com",
-					imageUrl: '/assets/images/netflix_logo.png',     // TODO
+					imageUrl: '/assets/images/soundcloud_logo.png',     // TODO
 					cost: 6.00,
 					lastUsed: "2 months go",
 					startDate: "May 9, 2012",
@@ -86,10 +89,10 @@ define([
 				}));
 
                 subList.push( new Subscription({
-					name: "Lynda",
+					name: "Lynda Premium",
                     description: "What do you want to learn today?",
 					url: "http://www.lynda.com",
-					imageUrl: '/assets/images/pandora_logo.png',     // TODO 
+					imageUrl: '/assets/images/lynda_logo.png',     // TODO 
 					cost: 25.00,
 					lastUsed: "9 months ago",
 					startDate: "August 1, 2013",
@@ -112,6 +115,45 @@ define([
                 $("#monthly-cost", this.el).text(totalFee.toFixed(2));
 				/*				   */
 
+                var sugList = [];
+                sugList.push( new Service({ 
+                    name: "Hulu Plus",
+                    description: "Watch TV and movies via Xbox, PS3, Wii and more.",
+                    url: "http://www.hulu.com/plus",
+                    cost: 7.99,
+					imageUrl: '/assets/images/hulu_logo.png',     // TODO 
+                    type: "TV/Movies",
+                }));
+                sugList.push( new Service({ 
+                    name: "Spotify Premium",
+                    description: "Music for everyone.",
+                    url: "http://www.spotify.com/us",
+                    cost: 9.99,
+					imageUrl: '/assets/images/spotify_logo.png',     // TODO 
+                    type: "Music",
+                }));
+                sugList.push( new Service({ 
+                    name: "Google Play Music",
+                    description: "Google Play Music makes it easy to listen to the music you love on Android, iOS, and the web.",
+                    url: "http://www.play.google.com/music",
+                    cost: 9.99,
+					imageUrl: '/assets/images/play_logo.png',     // TODO 
+                    type: "Music",
+                }));
+
+                for (i in sugList) { 
+                    var sug = sugList[i];
+                    var template = _.template( 
+                        "<div class='suggestion suggestion" + i + "' data-toggle='tooltip' data-placement='left' title='<%= description %>'><img src='<%= imageUrl %>'></div>" 
+                    );
+                    $(".suggestions-holder", this.el).append( template( sug.toJSON() ) );
+                }
+                $(".suggestions-holder > .suggestion", this.el).on( "click", function () { 
+                    var i = $(this).attr("class").replace("suggestion suggestion", "");
+                    var dialogView = new SingleSuggestionView({ model: sugList[i] });
+                    $(".dialog-holder").html( dialogView.render().el );
+                    $("#single-subscription-dialog").modal("show");		// TODO
+                });
 				return this;
 			},
 
@@ -120,6 +162,4 @@ define([
 		return SubscriptionsView;
 	}
 );
-
-
 

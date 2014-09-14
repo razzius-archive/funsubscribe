@@ -40,6 +40,8 @@ define([
 				this.bigView = new SubscriptionsView();
 
 				this.renderBigView();
+
+                $(".suggestion").tooltip();
 			},
 
 			clearBigView: function () {
