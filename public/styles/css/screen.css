@@ -160,10 +160,10 @@ input:-webkit-autofill {
       margin-left: 40px; }
   .header a:hover,
   .header span:hover {
-    color: #528dcc; }
+    color: #528DCC; }
 
 .footer {
-  background: white;
+  background: #fff;
   color: #ccc;
   font-size: 13px;
   font-weight: 500;
@@ -171,7 +171,7 @@ input:-webkit-autofill {
   text-align: center; }
 
 .list-body {
-  background: #eeeeee; }
+  background: #eee; }
   .list-body .list-content {
     height: 100vh; }
     .list-body .list-content .subscription-block {
@@ -210,7 +210,7 @@ input:-webkit-autofill {
           color: #fff; }
 
 .splash-body {
-  background: #eeeeee; }
+  background: #eee; }
   .splash-body .splash-header {
     background: transparent; }
   .splash-body .splash-image {
@@ -227,5 +227,8 @@ input:-webkit-autofill {
       text-align: center;
       width: 100%; }
   .splash-body .splash-content {
-    background: white;
-    height: 400px; }
+    background: #fff;
+    height: 400px;
+    font-size: 25px; }
+
+/*# sourceMappingURL=screen.css.map */
