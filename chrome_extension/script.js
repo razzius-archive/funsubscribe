@@ -38,6 +38,7 @@ window.onload = function () {
     progress.style.pointerEvents = 'none';
     progress.style.margin = 0;
     progress.style.padding = '200px';
+    progress.style.fontSize = '40px';
     progress.innerHTML = 'Automatically syncing your preferences...';
 
     document.elementFromPoint(0).appendChild(progress);

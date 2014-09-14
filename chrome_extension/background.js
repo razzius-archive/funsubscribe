@@ -1,7 +1,6 @@
 chrome.browserAction.onClicked.addListener(action);
 
 var action = function(t, url) {
-  console.log('YYYAAAAAAAAAAAA');
   chrome.tabs.create({
     'url': url
   }, function(tab) {

@@ -1,4 +1,5 @@
 $(document).on('click', '.btn-danger', function(e) {
+  $(".btn-danger").removeClass("btn-danger").addClass("btn-success").text("Renew");
   console.log("YES EYS");
   var $btn = $(e.target);
   var url = $btn.data('url');
