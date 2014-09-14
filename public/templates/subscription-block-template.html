@@ -1,13 +1,18 @@
-
-   <div class="row">
-        <div class="col-md-3 block-img">
-            <img class="pull-left" src="<%= imageUrl %>">
-        </div>
-        <div class="col-md-6">
-            <h1><%= name %></h1>
-        </div>
-        <div class="col-md-3">
-            <pre class="pull-right"><%= cost %> / month</pre>
-        </div>
-
+<div class="row">
+    <div class="col-md-3">
+        <img class="pull-left" src="<%= imageUrl %>">
     </div>
+    <div class="col-md-6">
+        <h1><%= name %></h1>
+    </div>
+    <div class="col-md-3">
+        <pre class="pull-right"><%= cost %> / month</pre>
+    </div>
+    <div class="col-md-4">
+        <p>Start date: <%= startDate %></p>
+        <p>Last used: <%= lastUsed %></p>
+    </div>
+    <div class="col-md-3 pull-right">
+        <p>Status: <%= status %></p>
+    </div>
+</div>
