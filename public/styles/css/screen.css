@@ -182,17 +182,8 @@ input:-webkit-autofill {
       margin: 20px 20px 0 0;
       position: relative; }
       .list-body .list-content .subscription-block img {
-        height: 60px;
+        height: 150px;
         width: 150px; }
-      .list-body .list-content .subscription-block span {
-        color: #bbb;
-        font-size: 11px;
-        font-weight: 500;
-        display: block;
-        margin-top: 15px;
-        text-align: center;
-        text-transform: uppercase;
-        width: 100%; }
       .list-body .list-content .subscription-block button {
         background: #eee;
         border: 10px solid #fff;
@@ -202,7 +193,6 @@ input:-webkit-autofill {
         font-weight: 500;
         left: 0;
         padding: 10px 0;
-        position: absolute;
         text-transform: uppercase;
         width: 150px; }
         .list-body .list-content .subscription-block button:hover {

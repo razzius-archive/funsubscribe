@@ -29,7 +29,7 @@ define([
 				var subscription1 = new Subscription({ 
 					name: "Pandora",
 					url: "http://www.pandora.com",
-					imageUrl: 'http://www.sec.gov/Archives/edgar/data/1230276/000119312511032963/g119636g94a15.jpg',
+					imageUrl: '/assets/images/pandora_logo.png',
 					cost: "$3.99",
 					lastUsed: "6 days ago",
 					startDate: "May 11, 2013"
