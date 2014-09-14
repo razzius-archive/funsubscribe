@@ -33,6 +33,9 @@ define([
 					cost: "$3.99",
 					lastUsed: "6 days ago",
 					startDate: "May 11, 2013",
+					daysLeft: "23",
+					type: "music",
+					active: 1,
 					status: 'FUNSUBSCRIBED'
 				});
 

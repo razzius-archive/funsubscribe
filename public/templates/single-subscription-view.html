@@ -11,10 +11,51 @@
                     <img class="blur" src="<%= imageUrl %>">
                 </div>
             </div>
-            <hr>
             <div class="modal-body">
-            </div>
-            <div class="modal-footer">
+                <div class="row modal-subscription-name">
+                    <div class="col-md-3">
+                        <h3><%= name %></h3>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row modal-subscription-top">
+                            <div class="col-md-4">
+                                <h5><%= cost %>/month</h5>
+                            </div>
+                            <div class="col-md-4">
+                                <h5><%= lastUsed %></h5>
+                            </div>
+                            <div class="col-md-4">
+                                <h5>Status: <strong>
+                                    <% if (active) { %>
+                                        Active
+                                    <% } else { %>
+                                        Inactive
+                                    <% } %>
+                               </strong></h5>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h5>Subscriber since <%= startDate %></h5>
+                            </div>
+                            <div class="col-md-4">
+                                <h5><%= daysLeft %> Days Left</h5>
+                            </div>
+                            <div class="col-md-4">
+                                <h5>Type: <%= type %></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-buttons">
+                        <% if (active) { %>
+                            <button class='btn btn-md btn-danger'>Cancel</button>
+                        <% } else { %>
+                            <button class='btn btn-md btn-fun'>Renew</button>
+                        <% } %>
+                        <button class="btn btn-md btn-fun">Funsubscribe!</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -30,10 +71,11 @@
         left: -100px;
         padding: 0px;
         width: 150%;
+        height: 500px;
         z-index: -1;
         -webkit-filter: blur(100px);
+        transform: translate3d(100, 100, 0);
         opacity: .7;
-        -webkit-transform: translate3d(100, 0, 0);
     }
     #single-subscription-dialog h1 {
         padding: 80px;
@@ -41,7 +83,7 @@
     }
     #single-subscription-dialog .modal-dialog {
         width: 1000px;
-        height: 700px;
+        height: 650px;
     }
     #single-subscription-dialog .modal-dialog .modal-content {
         width: 100%;
@@ -51,10 +93,30 @@
         position: relative;
     }
     #single-subscription-dialog .modal-dialog .modal-content .modal-header {
-        height: 400px;
+        height: 450px;
     }
     #single-subscription-dialog img {
         width: 200px;
+    }
+    #single-subscription-dialog .modal-dialog .modal-content .modal-body {
+        height: 200px;
+        background-color: white;
+    }
+    #single-subscription-dialog .modal-subscription-name {
+        padding-left: 30px;
+        margin-top: -15px;
+    }
+    #single-subscription-dialog .modal-buttons {
+        margin-top: 35px;
+        text-align: center;
+    }
+    #single-subscription-dialog .modal-buttons button {
+        margin-left: 20px;
+    }
+    #single-subscription-dialog .modal-buttons .btn-fun {
+        background-color: cyan;
+        border-color: cyan;
+        margin-left: 20px;
     }
 </style>
 
