@@ -6,7 +6,6 @@ $(document).on('click', '.btn-danger', function(e) {
   chrome.extension.sendMessage({'url': url, 'greeting': 'hello'}, function(response) {
     // console.log(response.farewell);
   });
-  alert(':')
 });
 
 console.log(":D)");
