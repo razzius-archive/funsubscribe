@@ -8,7 +8,12 @@ require.config({
         bootstrap: {
             deps: ['jquery'],
             exports: 'jquery'
-        }
+        },
+
+		jqueryui: { 
+			exports: "$",
+			deps: "jquery"
+		}
     },
     paths: {
         jquery: '../bower_components/jquery/dist/jquery',
@@ -16,7 +21,7 @@ require.config({
         underscore: '../bower_components/underscore/underscore',
         bootstrap: '../bower_components/sass-bootstrap/dist/js/bootstrap',
 		text: '../bower_components/requirejs-text/text',
-		jqueryui: '../bower_components/jquery-ui/jquery-ui.js',
+		jqueryui: '../bower_components/jquery-ui/jquery-ui',
     }
 });
 
