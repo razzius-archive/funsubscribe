@@ -12,8 +12,6 @@ define([
 			initialize: function () { 
 			},
 
-			idAttribute: ,
-
 			validate: function () { 
 			}
 		});
