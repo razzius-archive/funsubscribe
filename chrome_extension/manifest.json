@@ -1,6 +1,6 @@
 {
-  "name": "Page Redder",
-  "description": "Make the current page red",
+  "name": "Funsubscribe",
+  "description": "Manage your online subscriptions",
   "version": "2.0",
   "permissions": [
     "tabs",
@@ -13,7 +13,13 @@
     "persistent": false
   },
   "browser_action": {
-    "default_title": "Manage your subscriptions"
+    "default_title": "Sync your subscription preferences"
   },
+  "content_scripts": [
+    {
+      "matches": ["http://funsubscribe.herokuapp.com/*"],
+      "js": ["content.js"]
+    }
+  ],
   "manifest_version": 2
 }
