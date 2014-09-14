@@ -112,6 +112,34 @@ define([
                 $("#monthly-cost", this.el).text(totalFee.toFixed(2));
 				/*				   */
 
+                var sugList = [];
+                sugList.push( new Service({ 
+                    name: "Hulu Plus",
+                    description: "Watch TV and movies via Xbox, PS3, Wii and more.",
+                    url: "http://www.hulu.com/plus",
+                    cost: 7.99,
+					imageUrl: '/assets/images/netflix_logo.png',     // TODO 
+                    type: "TV/Movies",
+                }));
+                sugList.push( new Service({ 
+                    name: "Spotify",
+                    description: "Music for everyone.",
+                    url: "http://www.spotify.com/us",
+                    cost: 9.99,
+					imageUrl: '/assets/images/netflix_logo.png',     // TODO 
+                    type: "Music",
+                }));
+                sugList.push( new Service({ 
+                    name: "Hulu Plus",
+                    description: "Watch TV and movies via Xbox, PS3, Wii and more.",
+                    url: "http://www.hulu.com/plus",
+                    cost: 7.99,
+					imageUrl: '/assets/images/netflix_logo.png',     // TODO 
+                    type: "TV/Movies",
+                }));
+
+
+
 				return this;
 			},
 
@@ -120,6 +148,4 @@ define([
 		return SubscriptionsView;
 	}
 );
-
-
 
