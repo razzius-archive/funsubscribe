@@ -3,14 +3,14 @@ var mongoose = require('mongoose'),
 
 
 var UserSchema = new Schema({
-	name: { 
+	name: {
 		"type": String,
 		"trim": true,
 		"required": "Name cannot be blank",
 	},
 	email: {
-		'email': String,
-		"time": true,
+		'type': String,
+		'trim': true,
 		"required": "Must provide email"
 	}
 });
@@ -29,12 +29,12 @@ var ServiceSchema = new Schema({
 		'trim': true,
 		'required': 'Service URL cannot be blank'
 	},
-	cost: { 
+	cost: {
 		'type': Number,
 		'get': getPrice,
 		'set': setPrice,
 	},
-	interval: { 
+	interval: {
 		"type": String, 	// monthly, bi-monthly, etc.
 		"trim": true,
 	}
@@ -49,23 +49,23 @@ var PromotionSchema = new Schema({
 	service: {
 		'type': Schema.ObjectId,
 		'ref': 'ServiceSchema'
-	}
-	description: { 
-		'type': String
-		'trim': true,
+	},
+	description: {
+		'type': String,
+		'trim': true
 	}
 });
 
-var SubscriptionSchema = new Schema({ 
-	user: { 
+var SubscriptionSchema = new Schema({
+	user: {
 		'type': Schema.ObjectId,
 		'ref': 'UserSchema',
 	},
-	service: { 
+	service: {
 		'type': Schema.ObjectId,
 		'ref': "ServiceSchema"
 	},
-	dateStarted: { 
+	dateStarted: {
 		"type": Date,
 		"default": Date.now,
 	}
@@ -90,8 +90,8 @@ function setPrice(num){
 }
 
 module.exports = {
-	User: User
-	Service: Service
-	Subscription: Subscription
+	User: User,
+	Service: Service,
+	Subscription: Subscription,
 	Promotion: Promotion
 };
