@@ -6,8 +6,8 @@ var Service = require('./models').Service;
 
 var app = express();
 
-app.set('port', config.PORT)
-app.use(express.static(__dirname + '/public'))
+app.set('port', config.PORT);
+app.use(express.static(__dirname + '/public'));
 
 
 mongoose.connect(config.MONGO_URL);
