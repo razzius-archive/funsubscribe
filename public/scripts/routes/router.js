@@ -4,19 +4,27 @@ define([
 	"backbone",
 	"events",
 	"views/splashView",
-	"views/loginView",
+	"views/subscriptionsView",
 
 	], function (	$, _, Backbone, vent,
-					SplashView, LoginView
+					SplashView, SubscriptionsView
 				) { 
 		var Router = Backbone.Router.extend({
 			routes: { 
 				"": "loadIndex",
-				"login": "loadLoginDialog",
+				// "login": "loadLoginDialog",
+				"subscriptions": "loadSubscriptions"
 			},
 
 			initialize: function () { 
 				// get cookie to check if user session is set
+				var router = this;
+				this.listenTo( vent, "loginSubmit", function () { 
+					router.navigate( "subscriptions", { trigger: true } );
+					$("#register-modal").modal("hide");
+					$("#login-modal").modal("hide");
+					$(".modal-backdrop").remove();
+				});
 			},
 
 			loadIndex: function () { 
@@ -26,9 +34,11 @@ define([
 				this.renderBigView();
 			},
 
-			loadLoginDialog: function () { 
-				this.dialog = new LoginView();
-				this.renderDialogView();
+			loadSubscriptions: function () { 
+				this.clearBigView();
+				this.bigView = new SubscriptionsView();
+
+				this.renderBigView();
 			},
 
 			clearBigView: function () { 
@@ -39,11 +49,7 @@ define([
 				$("#view-holder").html( this.bigView.render().el );
 			},
 
-			renderDialogView: function () { 
-			},
-
-			renderDialogView: function () { 
-
+			renderDialogView: function () {		// not necessary because of bootstrap 
 			}
 
 		});

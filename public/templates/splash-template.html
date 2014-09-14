@@ -5,14 +5,37 @@
         <button type="button" class="close" data-dismiss="modal">
           <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
         </button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Login</h4>
       </div>
       <div class="modal-body">
-        ...
+        <input type="text" class="login-email" placeholder="Email"/>
+        <input type="password" class="login-password" placeholder="Password"/>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button class="modal-cancel" data-dismiss="modal">Close</button>
+        <button class="modal-submit login">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Register</h4>
+      </div>
+      <div class="modal-body">
+        <input type="text" placeholder="Email"/>
+        <input type="password" placeholder="Password"/>
+        <input type="password" placeholder="Confirm password"/>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-cancel" data-dismiss="modal">Close</button>
+        <button class="modal-submit">Register</button>
       </div>
     </div>
   </div>
@@ -25,19 +48,26 @@
     Funsubscribe
   </div>
   <div class="header-auth">
-    <span>Register</span>
+    <span data-toggle="modal" data-target="#register">Register</span>
     <span data-toggle="modal" data-target="#login">Login</span>
   </div>
 </div>
 
 <div class="splash-image website-max-width">
   <img src="assets/images/splash_2.png"/>
-  <span>Tackle your subscriptions</span>
+  <span>Manage all your online services</span>
 </div>
 
 <div class="splash-content">
   <div class="website-max-width">
-
+      <div class="splash-message">
+          <span>Never spend an extra cent</span>
+          <h5>Automatically cancel your unused services</h5> 
+          <h5>Renew them at any time</h5> 
+      </div>
+      <div class="splash-message-img">
+          <img src="assets/images/services.png">
+      </div>
   </div>
 </div>
 
@@ -46,3 +76,23 @@
     Made at PennApps 2014
   </div>
 </div>
+
+<style>
+    .splash-content span { 
+        font-size: 30px;
+    }
+    .splash-content .splash-message { 
+        padding-left: 20px;
+        padding-top: 140px;
+        color: #555;
+        float: left;
+    }
+    .splash-content .splash-message h5 { 
+        margin-left: 10px;
+    }
+    .splash-content .splash-message-img { 
+        padding-top: 80px;
+        float: right;
+    }
+
+</style>

@@ -2,6 +2,8 @@
 'use strict';
 
 require.config({
+    urlArgs: "bust=" + (new Date()).getTime(),  // TODO DEVELOPMENT ONLY, prevents caching
+
     shim: {
         bootstrap: {
             deps: ['jquery'],
