@@ -1,4 +1,18 @@
-    
-    <img src="<%= imageUrl %>">
-    <span>20 days left</span>
-    <button><i class="fa fa-times fa-right"></i>Cancel</button>
+    <div class="row">
+        <div class="col-md-3">
+            <img class="pull-left" src="<%= imageUrl %>">
+        </div>
+        <div class="col-md-6">
+            <h1><%= name %></h1>
+        </div>
+        <div class="col-md-3">
+            <pre class="pull-right"><%= cost %> / month</pre>
+        </div>
+
+    </div>
+
+    <style type="text/css">
+        .service-name {
+            margin-left: 1em;
+        }
+    </style>
