@@ -8,6 +8,9 @@
                 <div class="row">
                     <img class="pull-left" src="<%= imageUrl %>">
                     <h1> <%= name %></h1>
+                    <div class="subscription-description">
+                        <h3> <%= description %></h3>
+                    </div>
                     <img class="blur" src="<%= imageUrl %>">
                 </div>
             </div>
@@ -19,18 +22,13 @@
                     <div class="col-md-9">
                         <div class="row modal-subscription-top">
                             <div class="col-md-4">
-                                <h5><%= cost %>/month</h5>
+                                <h5>$<%= cost %>/month</h5>
                             </div>
                             <div class="col-md-4">
                                 <h5><%= lastUsed %></h5>
                             </div>
                             <div class="col-md-4">
-                                <h5>Status: <strong>
-                                    <% if (active) { %>
-                                        Active
-                                    <% } else { %>
-                                        Inactive
-                                    <% } %>
+                                <h5>Status: <%= status %> <strong>
                                </strong></h5>
 
                             </div>
@@ -51,7 +49,7 @@
                         <% if (active) { %>
                             <button class='btn btn-md btn-danger'>Cancel</button>
                         <% } else { %>
-                            <button class='btn btn-md btn-fun'>Renew</button>
+                            <button class='btn btn-md btn-success'>Renew</button>
                         <% } %>
                         <button class="btn btn-md btn-fun">Funsubscribe!</button>
                     </div>
@@ -64,6 +62,10 @@
 <style type="text/css">
     #single-subscription-dialog img {
         margin: 40px;
+    }
+    #single-subscription-dialog .subscription-description { 
+        margin-top: 75px;
+        text-align: center;
     }
     #single-subscription-dialog .blur {
         position: absolute;
