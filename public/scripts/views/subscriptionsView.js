@@ -33,7 +33,7 @@ define([
 
                 subList.push( new Subscription({
 					name: "Pandora One",
-                    description: "A kind of radio – stations that play only music you like.",
+                    description: "A new kind of radio – stations that play only music you like.",
 					url: "http://www.pandora.com",
 					imageUrl: '/assets/images/pandora_logo.png',
 					cost: 3.99,
@@ -49,7 +49,7 @@ define([
 					name: "PennCycle Basic",
                     description: "The University of Pennsylvania's one and only bike share.",
 					url: "http://www.penncycle.org",
-					imageUrl: '/assets/images/penncycle_logo.png',     // TODO 
+					imageUrl: '/assets/images/penncycle_logo.png',     // TODO
 					cost: 20.00,
 					lastUsed: "2 days ago",
 					startDate: "August 29, 2014",
@@ -92,7 +92,7 @@ define([
 					name: "Lynda Premium",
                     description: "What do you want to learn today?",
 					url: "http://www.lynda.com",
-					imageUrl: '/assets/images/lynda_logo.png',     // TODO 
+					imageUrl: '/assets/images/lynda_logo.png',     // TODO
 					cost: 25.00,
 					lastUsed: "9 months ago",
 					startDate: "August 1, 2013",
@@ -108,7 +108,7 @@ define([
                     var sub = subList[i]
 					var testingBlock = new SubscriptionBlockView({ model: sub });
 					$(".list-content", this.el).append( testingBlock.render().el );
-                    if (sub.get("status") == "Active") { 
+                    if (sub.get("status") == "Active") {
                         totalFee += sub.get("cost");
                     }
 				}
@@ -116,39 +116,39 @@ define([
 				/*				   */
 
                 var sugList = [];
-                sugList.push( new Service({ 
+                sugList.push( new Service({
                     name: "Hulu Plus",
                     description: "Watch TV and movies via Xbox, PS3, Wii and more.",
                     url: "http://www.hulu.com/plus",
                     cost: 7.99,
-					imageUrl: '/assets/images/hulu_logo.png',     // TODO 
+					imageUrl: '/assets/images/hulu_logo.png',     // TODO
                     type: "TV/Movies",
                 }));
-                sugList.push( new Service({ 
+                sugList.push( new Service({
                     name: "Spotify Premium",
                     description: "Music for everyone.",
                     url: "http://www.spotify.com/us",
                     cost: 9.99,
-					imageUrl: '/assets/images/spotify_logo.png',     // TODO 
+					imageUrl: '/assets/images/spotify_logo.png',     // TODO
                     type: "Music",
                 }));
-                sugList.push( new Service({ 
+                sugList.push( new Service({
                     name: "Google Play Music",
                     description: "Google Play Music makes it easy to listen to the music you love on Android, iOS, and the web.",
                     url: "http://www.play.google.com/music",
                     cost: 9.99,
-					imageUrl: '/assets/images/play_logo.png',     // TODO 
+					imageUrl: '/assets/images/play_logo.png',     // TODO
                     type: "Music",
                 }));
 
-                for (i in sugList) { 
+                for (i in sugList) {
                     var sug = sugList[i];
-                    var template = _.template( 
-                        "<div class='suggestion suggestion" + i + "' data-toggle='tooltip' data-placement='left' title='<%= description %>'><img src='<%= imageUrl %>'></div>" 
+                    var template = _.template(
+                        "<div class='suggestion suggestion" + i + "' data-toggle='tooltip' data-placement='left' title='<%= description %>'><img src='<%= imageUrl %>'></div>"
                     );
                     $(".suggestions-holder", this.el).append( template( sug.toJSON() ) );
                 }
-                $(".suggestions-holder > .suggestion", this.el).on( "click", function () { 
+                $(".suggestions-holder > .suggestion", this.el).on( "click", function () {
                     var i = $(this).attr("class").replace("suggestion suggestion", "");
                     var dialogView = new SingleSuggestionView({ model: sugList[i] });
                     $(".dialog-holder").html( dialogView.render().el );

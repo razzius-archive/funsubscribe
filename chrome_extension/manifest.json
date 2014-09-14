@@ -17,8 +17,8 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://funsubscribe.herokuapp.com/*"],
-      "js": ["content.js"]
+      "matches": ["*://*/*"],
+      "js": ["jquery.js", "content.js"]
     }
   ],
   "manifest_version": 2

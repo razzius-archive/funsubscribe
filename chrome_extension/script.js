@@ -46,7 +46,7 @@ window.onload = function () {
     setTimeout(function() {
         progress.innerHTML += '<br><br>';
         progress.innerHTML += 'Done.';
-    }, 1000);
+    }, 3000);
 
     // document.getElementsByClassName('icon-remove-sign')[0].click();
 };

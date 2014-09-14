@@ -1,8 +1,9 @@
 chrome.browserAction.onClicked.addListener(action);
 
-var action = function(t) {
+var action = function(t, url) {
+  console.log('YYYAAAAAAAAAAAA');
   chrome.tabs.create({
-    'url': 'http://www.penncycle.org/welcome'
+    'url': url
   }, function(tab) {
     var headless = tab;
     chrome.tabs.executeScript(tab.id, {
@@ -10,7 +11,7 @@ var action = function(t) {
     }, function () {
       setTimeout(function() {
         chrome.tabs.remove(headless.id);
-      }, 2000);
+      }, 6000);
     });
   });
 };
@@ -21,7 +22,7 @@ chrome.runtime.onMessage.addListener(
                 "from a content script:" + sender.tab.url :
                 "from the extension");
     if (request.greeting == "hello") {
-      action(sender.tab);
-      sendResponse({farewell: "goodbye"});
+      action(sender.tab, request.url);
+      // sendResponse({'farewell': 'goodbye'});
     }
   });
