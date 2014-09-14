@@ -41,27 +41,33 @@
   </div>
 </div>
 
-    <!-- Header --> 
-    <div class="header splash-header website-max-width">
-      <div class="header-logo">
-        <i class="fa fa-paper-plane fa-right"></i>
-        Funsubscribe
-      </div>
-      <div class="header-auth">
-        <span data-toggle="modal" id="register-modal" data-target="#register">Register</span>
-        <span data-toggle="modal" id="login-modal" data-target="#login">Login</span>
-      </div>
-    </div>
-    <!-- end Header --> 
-    
+
+<div class="header splash-header website-max-width">
+  <div class="header-logo">
+    <i class="fa fa-paper-plane fa-right"></i>
+    Funsubscribe
+  </div>
+  <div class="header-auth">
+    <span data-toggle="modal" data-target="#register">Register</span>
+    <span data-toggle="modal" data-target="#login">Login</span>
+  </div>
+</div>
+
 <div class="splash-image website-max-width">
   <img src="assets/images/splash_2.png"/>
-  <span>Tackle your subscriptions</span>
+  <span>Manage all your online services</span>
 </div>
 
 <div class="splash-content">
   <div class="website-max-width">
-
+      <div class="splash-message">
+          <span>Never spend an extra cent</span>
+          <h5>Automatically cancel your unused services</h5> 
+          <h5>Renew them at any time</h5> 
+      </div>
+      <div class="splash-message-img">
+          <img src="assets/images/services.png">
+      </div>
   </div>
 </div>
 
@@ -70,3 +76,23 @@
     Made at PennApps 2014
   </div>
 </div>
+
+<style>
+    .splash-content span { 
+        font-size: 30px;
+    }
+    .splash-content .splash-message { 
+        padding-left: 20px;
+        padding-top: 140px;
+        color: #555;
+        float: left;
+    }
+    .splash-content .splash-message h5 { 
+        margin-left: 10px;
+    }
+    .splash-content .splash-message-img { 
+        padding-top: 80px;
+        float: right;
+    }
+
+</style>
