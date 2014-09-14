@@ -10,32 +10,33 @@ define([
 	], function (	$, _, Backbone, vent,
 					SubscriptionBlockView, Subscription,
 					subscriptionListTemplate
-				) { 
+				) {
 
-		var SubscriptionsView = Backbone.View.extend({ 
+		var SubscriptionsView = Backbone.View.extend({
 			template: _.template( subscriptionListTemplate ),
 
 			// className:
 
-			events: { 
+			events: {
 			},
 
 			initialize: function () {
 			},
 
-			render: function () { 
+			render: function () {
 				$(this.el).html( this.template() );
 				/* Testing for now */
-				var subscription1 = new Subscription({ 
+				var subscription1 = new Subscription({
 					name: "Pandora",
 					url: "http://www.pandora.com",
 					imageUrl: '/assets/images/pandora_logo.png',
 					cost: "$3.99",
 					lastUsed: "6 days ago",
-					startDate: "May 11, 2013"
+					startDate: "May 11, 2013",
+					status: 'FUNSUBSCRIBED'
 				});
 
-				for (var i = 0; i < 4; i++) { 
+				for (var i = 0; i < 4; i++) {
 					var testingBlock = new SubscriptionBlockView({ model: subscription1 });
 					$(".list-content", this.el).append( testingBlock.render().el );
 				}
