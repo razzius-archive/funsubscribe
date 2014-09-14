@@ -23,6 +23,12 @@ define([
 
 			render: function () {
 				$(this.el).html( this.template() );
+				var self = this;
+				$(".modal-content input", this.el).keypress(function(e) {
+					if (e.which === 13) {
+						self.submitLogin();
+					}
+				});
 				return this;
 			},
 
