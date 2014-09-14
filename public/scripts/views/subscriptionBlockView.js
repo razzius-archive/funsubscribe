@@ -8,21 +8,23 @@ define([
 
 	], function (	$, _, Backbone, vent,
 					subscriptionBlockTemplate
-				) { 
+				) {
 
-		var SubscriptionBlockView = Backbone.View.extend({ 
+		var SubscriptionBlockView = Backbone.View.extend({
 			template: _.template( subscriptionBlockTemplate ),
 
 			className: "subscription-block",
 
-			events: { 
+			events: {
 			},
 
-			initialize: function () { 
+			initialize: function () {
 			},
 
-			render: function () { 
-				$(this.el).html( this.template() );
+			render: function () {
+				$(this.el).html( this.template(
+
+				) );
 
 				return this;
 			}
